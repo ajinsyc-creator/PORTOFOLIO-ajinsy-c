@@ -1,6 +1,523 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>   
+  <!DOCTYPE html>
+<html lang="en">
+<head>   <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WW8597CL');</script>
+<!-- End Google Tag Manager --> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AJINSY — Front-End Developer & Digital Marketer</title>
+<meta name="description" content="C. Ajinsy — Front-End Developer and Digital Marketing Executive specialising in SEO, social media marketing, PPC and content strategy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fff9fb;
+    --bg-alt:#fce4ec;
+    --card:#ffffff;
+    --ink:#29252a;
+    --ink-dim:#5e5560;
+    --ink-muted:#9c8f96;
+    --pink:#f4a6b8;
+    --pink-deep:#d96c8a;
+    --pink-soft:#fce4ec;
+    --line:rgba(41,37,42,0.09);
+    --line-strong:rgba(41,37,42,0.16);
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Poppins',sans-serif;margin:0;font-weight:600;letter-spacing:-0.01em;}
+  a{color:inherit;text-decoration:none;}
+  ul{margin:0;padding:0;list-style:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+  section{padding:80px 0;border-top:1px solid var(--line);}
+  section:first-of-type{border-top:none;}
+  .alt{background:var(--bg-alt);}
+  .eyebrow{font-size:14px;color:var(--pink-deep);font-weight:600;margin-bottom:14px;}
+  .section-head{max-width:640px;margin-bottom:40px;}
+  .section-head h2{font-size:clamp(28px,3.4vw,38px);line-height:1.2;}
+  .section-head p{color:var(--ink-muted);margin-top:14px;font-size:17px;}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+
+  header{position:sticky;top:0;z-index:100;background:rgba(255,249,251,0.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;padding-top:20px;padding-bottom:20px;}
+  .brand{font-family:'Poppins',sans-serif;font-weight:800;font-size:21px;letter-spacing:0.01em;}
+  .brand .dotb{color:var(--pink-deep);}
+  .navlinks{display:flex;gap:34px;}
+  .navlinks a{font-size:14.5px;color:var(--ink-dim);position:relative;padding-bottom:4px;}
+  .navlinks a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--pink-deep);transition:width .25s ease;}
+  .navlinks a:hover::after{width:100%;}
+  .navcta{border:1px solid var(--line-strong);padding:9px 20px;border-radius:999px;font-size:14px;font-weight:500;transition:.2s;}
+  .navcta:hover{border-color:var(--pink-deep);background:var(--pink-deep);color:#fff;}
+  .menu-btn{display:none;background:none;border:none;cursor:pointer;padding:6px;}
+  .menu-btn span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0;}
+
+  .hero{padding:64px 0 72px;position:relative;overflow:hidden;}
+  .blob{position:absolute;border-radius:50%;filter:blur(55px);opacity:0.55;z-index:0;animation:float 11s ease-in-out infinite;}
+  .blob1{width:440px;height:440px;background:var(--pink-soft);top:-170px;right:-130px;}
+  .blob2{width:260px;height:260px;background:#f9d4de;bottom:-100px;right:300px;animation-delay:2.5s;}
+  @keyframes float{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-22px) scale(1.03);}}
+  @media (prefers-reduced-motion:reduce){.blob{animation:none;}}
+  .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center;position:relative;z-index:1;}
+  .kicker{display:inline-flex;align-items:center;gap:8px;color:var(--ink-muted);font-size:14px;margin-bottom:26px;}
+  .kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--pink-deep);animation:pulse 1.8s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.3;}}
+  .wordmark{font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(46px,6vw,72px);line-height:0.95;letter-spacing:-0.01em;margin-bottom:18px;color:var(--ink);}
+  .wordmark span{color:var(--pink-deep);}
+  .hero-role{font-family:'Poppins',sans-serif;font-size:17px;font-weight:600;color:var(--pink-deep);margin-bottom:22px;}
+  .hero h1{font-size:clamp(24px,2.4vw,30px);line-height:1.35;max-width:17ch;font-weight:600;color:var(--ink-dim);}
+  .hero p.desc{margin-top:18px;color:var(--ink-muted);font-size:16.5px;max-width:46ch;}
+  .hero-ctas{display:flex;gap:16px;margin-top:38px;flex-wrap:wrap;}
+  .btn-primary,.btn-secondary{padding:14px 26px;border-radius:999px;font-size:15px;font-weight:500;display:inline-flex;align-items:center;gap:8px;transition:.2s;}
+  .btn-primary{background:var(--pink-deep);color:#fff;}
+  .btn-primary:hover{background:#c15a79;transform:translateY(-2px);box-shadow:0 12px 26px rgba(217,108,138,0.32);}
+  .btn-secondary{border:1px solid var(--line-strong);color:var(--ink);}
+  .btn-secondary:hover{border-color:var(--pink-deep);transform:translateY(-2px);}
+
+  .hero-figure{position:relative;aspect-ratio:4/5;border-radius:24px;background:linear-gradient(160deg,var(--pink-soft),var(--bg));border:1px solid var(--line);overflow:hidden;animation:bob 6s ease-in-out infinite;}
+  @keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
+  @media (prefers-reduced-motion:reduce){.hero-figure{animation:none;}}
+  .hero-figure img{width:100%;height:100%;object-fit:cover;}
+  .hero-figure .cap{position:absolute;bottom:18px;left:18px;font-size:13px;color:var(--ink-muted);background:rgba(255,255,255,0.85);padding:6px 12px;border-radius:999px;backdrop-filter:blur(6px);}
+  .growth-mini{position:absolute;top:20px;right:20px;background:var(--card);border-radius:14px;padding:14px 16px;box-shadow:0 14px 30px rgba(41,37,42,0.1);}
+  .growth-mini .val{font-family:'Poppins',sans-serif;font-weight:700;font-size:18px;color:var(--pink-deep);}
+  .growth-mini .lbl{font-size:11px;color:var(--ink-muted);}
+
+  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink);overflow:hidden;padding:16px 0;}
+  .marquee-track{display:flex;gap:48px;width:max-content;animation:scroll 24s linear infinite;}
+  @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  .marquee-track span{font-family:'Poppins',sans-serif;font-size:18px;font-weight:600;color:#fff;white-space:nowrap;}
+  .marquee-track span.pk{color:var(--pink);}
+  @media (prefers-reduced-motion:reduce){.marquee-track{animation:none;}}
+
+  .about-grid{display:block;}
+  .about-figure{aspect-ratio:4/5;border-radius:18px;background:linear-gradient(160deg,var(--pink-soft),var(--bg-alt));border:1px solid var(--line);display:flex;align-items:end;padding:22px;}
+  .about-figure span{font-size:13px;color:var(--ink-muted);}
+  .about-body p{color:var(--ink-dim);font-size:16.5px;margin:0 0 18px;max-width:62ch;}
+  .about-cards{margin-top:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .about-cards div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 14px;font-size:13.5px;font-weight:500;text-align:center;transition:.2s;}
+  .about-cards div:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(41,37,42,0.08);border-color:var(--pink-deep);}
+  .about-goal{margin-top:32px;padding:20px 22px;border-left:3px solid var(--pink-deep);background:var(--pink-soft);color:var(--ink);font-size:15.5px;border-radius:0 12px 12px 0;}
+
+  .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .skill-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 16px 20px;transition:transform .2s,box-shadow .2s,border-color .2s;}
+  .skill-card:hover{transform:translateY(-5px);box-shadow:0 16px 32px rgba(217,108,138,0.16);border-color:var(--pink-deep);}
+  .skill-card .sthumb{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:10px;margin-bottom:14px;}
+  .skill-card .sname{font-family:'Poppins',sans-serif;font-size:16.5px;font-weight:600;}
+  .skill-card .scat{font-size:13px;color:var(--ink-muted);margin-top:6px;}
+
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;}
+  .service-cell{background:var(--card);padding:28px;min-height:190px;display:flex;flex-direction:column;justify-content:flex-start;gap:14px;transition:background .2s;}
+  .service-cell:hover{background:var(--pink-soft);}
+  .service-cell h3{font-size:19px;margin-bottom:12px;}
+  .service-cell p{color:var(--ink-muted);font-size:14.5px;margin:0;}
+  .service-num{font-size:13px;color:var(--pink-deep);font-weight:600;}
+  .service-cell .sethumb{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;}
+
+  .process-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;}
+  .process-strip::before{content:"";position:absolute;top:22px;left:5%;right:5%;height:1px;background:var(--line-strong);z-index:0;}
+  .p-step{position:relative;z-index:1;text-align:center;padding:0 10px;}
+  .p-step .p-num{width:44px;height:44px;border-radius:50%;background:var(--card);border:2px solid var(--pink-deep);color:var(--pink-deep);font-family:'Poppins',sans-serif;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:15px;}
+  .p-step h4{font-size:15px;margin-bottom:6px;}
+  .p-step p{font-size:13px;color:var(--ink-muted);margin:0;}
+
+  .project{display:grid;grid-template-columns:0.9fr 1.6fr;gap:48px;padding:44px 0;border-bottom:1px solid var(--line);}
+  .project:first-child{padding-top:0;}
+  .project:last-child{border-bottom:none;}
+  .project-tag{font-size:13px;color:var(--pink-deep);font-weight:600;margin-bottom:10px;}
+  .project h3{font-size:24px;margin-bottom:8px;}
+  .project .pdesc{color:var(--ink-muted);font-size:15px;margin-bottom:0;}
+  .psr{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .psr div h4{font-size:13px;color:var(--ink-muted);font-weight:500;margin-bottom:8px;}
+  .psr div p{font-size:14.5px;color:var(--ink-dim);margin:0;}
+
+  .timeline{position:relative;padding-left:32px;}
+  .timeline::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:var(--line-strong);}
+  .tl-item{position:relative;padding-bottom:40px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-item::before{content:"";position:absolute;left:-32px;top:4px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--pink-deep);}
+  .tl-date{font-size:13px;color:var(--ink-muted);margin-bottom:6px;}
+  .tl-item h3{font-size:18px;margin-bottom:6px;}
+  .tl-item p{color:var(--ink-muted);font-size:14.5px;margin:0;max-width:56ch;}
+
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
+  .why-item{padding:24px;border-radius:14px;transition:transform .2s,box-shadow .2s;}
+  .why-item:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(41,37,42,0.08);}
+  .why-item h3{font-size:17px;margin-bottom:10px;}
+  .why-item p{color:var(--ink-muted);font-size:14.5px;margin:0;}
+  .why-index{font-family:'Poppins',sans-serif;font-size:13px;color:var(--pink-deep);font-weight:700;margin-bottom:14px;}
+
+  .achieve-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  .achieve-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 20px;text-align:center;}
+  .achieve-card .aval{font-family:'Poppins',sans-serif;font-size:26px;font-weight:700;color:var(--pink-deep);}
+  .achieve-card .alab{font-size:13px;color:var(--ink-muted);margin-top:6px;}
+
+  .testi-box{border:1px dashed var(--line-strong);border-radius:16px;padding:48px 40px;text-align:center;color:var(--ink-muted);background:var(--card);}
+  .testi-box p{font-size:15.5px;margin:0 0 6px;}
+  .testi-box span{font-size:13.5px;}
+
+  .contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;}
+  .contact-info h2{font-size:clamp(28px,3.4vw,40px);line-height:1.2;margin-bottom:18px;}
+  .contact-info p{color:var(--ink-muted);font-size:16px;max-width:40ch;margin-bottom:32px;}
+  .contact-links li{display:flex;gap:12px;align-items:baseline;padding:12px 0;border-top:1px solid var(--line);font-size:15px;}
+  .contact-links li:last-child{border-bottom:1px solid var(--line);}
+  .contact-links .clabel{color:var(--ink-muted);width:90px;flex-shrink:0;font-size:13.5px;}
+  .contact-links a:hover{color:var(--pink-deep);}
+  form.contact-form{display:flex;flex-direction:column;gap:16px;}
+  .contact-form input,.contact-form textarea{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;color:var(--ink);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border-color .2s;}
+  .contact-form input:focus,.contact-form textarea:focus{border-color:var(--pink-deep);}
+  .contact-form textarea{resize:vertical;min-height:120px;}
+  .contact-form button{align-self:flex-start;margin-top:4px;}
+  .form-note{font-size:13px;color:var(--ink-muted);margin-top:-4px;}
+
+  footer{padding:36px 0;border-top:1px solid var(--line);}
+  .footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  footer p{color:var(--ink-muted);font-size:13.5px;}
+
+  @media (max-width:860px){
+    .navlinks,.navcta{display:none;}
+    .menu-btn{display:block;}
+    .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;}
+    .services-grid,.skills-grid{grid-template-columns:1fr 1fr;}
+    .why-grid,.achieve-grid{grid-template-columns:1fr 1fr;}
+    .project{grid-template-columns:1fr;gap:20px;}
+    .psr{grid-template-columns:1fr;gap:16px;}
+    .about-cards{grid-template-columns:1fr 1fr;}
+    .process-strip{grid-template-columns:1fr 1fr;gap:24px;}
+    .process-strip::before{display:none;}
+    section{padding:80px 0;}
+    .wrap{padding:0 20px;}
+  }
+  @media (max-width:520px){
+    .services-grid,.why-grid,.skills-grid,.achieve-grid{grid-template-columns:1fr;}
+  }
+
+  .mobile-panel{display:none;position:fixed;inset:0;background:var(--bg);z-index:200;padding:28px 24px;}
+  .mobile-panel.open{display:block;}
+  .mobile-panel .mp-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:44px;}
+  .mobile-panel a{display:block;font-family:'Poppins',sans-serif;font-size:26px;padding:14px 0;border-bottom:1px solid var(--line);}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW8597CL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header>
+  <nav class="wrap">
+    <a href="#home" class="brand">AJINSY<span class="dotb">.</span></a>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="navcta">Let's talk</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <div class="mp-top">
+    <span class="brand">AJINSY<span class="dotb">.</span></span>
+    <button class="menu-btn" id="closeBtn" aria-label="Close menu"><span></span><span></span><span></span></button>
+  </div>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#services">Services</a>
+  <a href="#projects">Projects</a>
+  <a href="#experience">Experience</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<section class="hero" id="home">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker"><span class="dot"></span>Available for freelance and full-time roles</div>
+      <div class="wordmark">AJIN<span>SY</span></div>
+      <div class="hero-role">Front-End Developer &amp; Digital Marketer</div>
+      <h1>I turn digital ideas into measurable growth.</h1>
+      <p class="desc">Front-End Developer &amp; Digital Marketing Executive helping brands grow through strategic SEO, targeted paid campaigns, and content that actually converts — backed by data, not guesswork.</p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-primary">View my work →</a>
+        <a href="#contact" class="btn-secondary">Let's connect</a>
+      </div>
+    </div>
+    <div class="hero-figure reveal">
+      <img src="images/hero-dashboard.jpg" alt="Digital marketing dashboard with growth metrics">
+      <span class="cap">Ajinsy — Front-End Developer &amp; Digital Marketer</span>
+      <div class="growth-mini"><div class="val">91%</div><div class="lbl">Lead growth</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <span>SEO <span class="pk">•</span></span><span>SOCIAL MEDIA MARKETING <span class="pk">•</span></span><span>PPC <span class="pk">•</span></span><span>CONTENT STRATEGY <span class="pk">•</span></span><span>EMAIL MARKETING <span class="pk">•</span></span><span>BRAND STRATEGY <span class="pk">•</span></span>
+    <span>SEO <span class="pk">•</span></span><span>SOCIAL MEDIA MARKETING <span class="pk">•</span></span><span>PPC <span class="pk">•</span></span><span>CONTENT STRATEGY <span class="pk">•</span></span><span>EMAIL MARKETING <span class="pk">•</span></span><span>BRAND STRATEGY <span class="pk">•</span></span>
+  </div>
+</div>
+
+<section id="about" class="alt">
+  <div class="wrap about-grid">
+    <div class="about-body reveal" style="max-width:760px;">
+      <div class="eyebrow">About me</div>
+      <h2 style="font-size:clamp(26px,3vw,34px);margin-bottom:20px;">A digital marketer who treats every campaign like a small experiment.</h2>
+      <p>I started in digital marketing because I liked the idea that you could test an idea on Monday and see whether people actually responded to it by Friday. A year in, that's still what keeps me interested — SEO audits, ad experiments, content that gets read instead of scrolled past.</p>
+      <p>I work with small and growing businesses that need someone who can own their online presence end to end — search, social, ads and the content that ties it together — rather than handing off pieces to five different people.</p>
+      <div class="about-cards">
+        <div>Creative Thinker</div>
+        <div>Data-Driven</div>
+        <div>SEO Focused</div>
+        <div>Result Oriented</div>
+      </div>
+      <div class="about-goal">Next up: growing into a role where I can run digital strategy for a brand from the ground up — not just individual campaigns.</div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Skills</div>
+      <h2>What I bring to a campaign</h2>
+      <p>A working toolkit built through client projects and hands-on practice, not just certifications.</p>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill-card"><img class="sthumb" src="images/seo.jpg" alt="SEO"><div class="sname">Search Engine Optimisation</div><div class="scat">Core</div></div>
+      <div class="skill-card"><img class="sthumb" src="images/onpage-seo.jpg" alt="On-page SEO"><div class="sname">On-Page SEO</div><div class="scat">Search</div></div>
+      <div class="skill-card"><img class="sthumb" src="images/offpage-seo.jpg" alt="Off-page SEO"><div class="sname">Off-Page SEO</div><div class="scat">Search</div></div>
+      <div class="skill-card"><img class="sthumb" src="images/keyword-research.jpg" alt="Keyword research"><div class="sname">Keyword Research</div><div class="scat">Search</div></div>
+      <div class="skill-card"><img class="sthumb" src="images/content-marketing.jpg" alt="Content marketing"><div class="sname">Content Marketing</div><div class="scat">Content</div></div>
+      <div class="skill-card"><img class="sthumb" src="images/social-media.jpg" alt="Social media marketing"><div class="sname">Social Media Marketing</div><div class="scat">Social</div></div>
+      <div class="skill-card"><div class="sname">Google Analytics</div><div class="scat">Tools</div></div>
+      <div class="skill-card"><div class="sname">Google Search Console</div><div class="scat">Tools</div></div>
+      <div class="skill-card"><div class="sname">Canva</div><div class="scat">Design</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Services</div>
+      <h2>How I can help your brand grow</h2>
+      <p>Six areas I take on for clients — individually or as a combined strategy.</p>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service-cell"><img class="sethumb" src="images/technical-seo.jpg" alt="SEO optimisation"><div><span class="service-num">01</span><h3>SEO Optimisation</h3><p>Technical fixes, on-page structure and content that moves you up the results page.</p></div></div>
+      <div class="service-cell"><img class="sethumb" src="images/social-media-service.jpg" alt="Social media marketing"><div><span class="service-num">02</span><h3>Social Media Marketing</h3><p>Platform-specific content and posting strategy that builds an audience, not just followers.</p></div></div>
+      <div class="service-cell"><img class="sethumb" src="images/content-marketing.jpg" alt="Content marketing"><div><span class="service-num">03</span><h3>Content Marketing</h3><p>A content plan tied to what your audience is actually searching for and asking.</p></div></div>
+      <div class="service-cell"><img class="sethumb" src="images/meta-google-ads.jpg" alt="Meta and Google ads"><div><span class="service-num">04</span><h3>Google Ads &amp; Meta Advertising</h3><p>Paid campaigns across Google and Meta, built around a realistic budget and clear KPIs.</p></div></div>
+      <div class="service-cell"><img class="sethumb" src="images/email-marketing.jpg" alt="Email marketing"><div><span class="service-num">05</span><h3>Email Marketing</h3><p>Sequences and campaigns that keep an audience warm between purchases.</p></div></div>
+      <div class="service-cell"><img class="sethumb" src="images/brand-strategy.jpg" alt="Brand strategy consulting"><div><span class="service-num">06</span><h3>Brand Strategy Consulting</h3><p>Bringing SEO, social, content and paid together into one coherent plan.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">How I work</div>
+      <h2>My digital marketing process</h2>
+    </div>
+    <div class="process-strip reveal">
+      <div class="p-step"><div class="p-num">01</div><h4>Research</h4><p>Audience, keywords, competitors</p></div>
+      <div class="p-step"><div class="p-num">02</div><h4>Strategy</h4><p>A plan tied to real goals</p></div>
+      <div class="p-step"><div class="p-num">03</div><h4>Execute</h4><p>Content, ads and SEO live</p></div>
+      <div class="p-step"><div class="p-num">04</div><h4>Analyze</h4><p>What the data actually says</p></div>
+      <div class="p-step"><div class="p-num">05</div><h4>Optimize</h4><p>Refine and repeat</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Projects</div>
+      <h2>Selected work</h2>
+      <p>A look at how I approach a campaign — the problem, the strategy, and what it produced.</p>
+    </div>
+
+    <div class="project reveal">
+      <div>
+        <div class="project-tag">SEO project</div>
+        <h3>Local search visibility rebuild</h3>
+        <p class="pdesc">[Client name] — a small service business with almost no presence in local search results.</p>
+      </div>
+      <div class="psr">
+        <div><h4>Problem</h4><p>The site wasn't ranking for any of the local terms customers were actually searching.</p></div>
+        <div><h4>Strategy</h4><p>Rebuilt on-page SEO, fixed technical issues, and targeted local keyword clusters.</p></div>
+        <div><h4>Result</h4><p>Organic visibility and local search impressions rose within three months.</p></div>
+      </div>
+    </div>
+
+    <div class="project reveal">
+      <div>
+        <div class="project-tag">Digital marketing campaign</div>
+        <h3>Multi-channel launch campaign</h3>
+        <p class="pdesc">[Client name] — a product launch that needed reach across search, social and email.</p>
+      </div>
+      <div class="psr">
+        <div><h4>Problem</h4><p>No existing audience, and a tight window before the launch date.</p></div>
+        <div><h4>Strategy</h4><p>Coordinated paid ads, organic social content and an email sequence around one message.</p></div>
+        <div><h4>Result</h4><p>Built a qualified lead list ahead of launch and hit the engagement target set for week one.</p></div>
+      </div>
+    </div>
+
+    <div class="project reveal">
+      <div>
+        <div class="project-tag">Website + social content</div>
+        <h3>Content system for ongoing growth</h3>
+        <p class="pdesc">[Client name] — needed a repeatable content process instead of one-off posts.</p>
+      </div>
+      <div class="psr">
+        <div><h4>Problem</h4><p>Inconsistent posting and content that wasn't tied to any keyword or audience research.</p></div>
+        <div><h4>Strategy</h4><p>Built a content calendar mapped to keyword research, with templates for each platform.</p></div>
+        <div><h4>Result</h4><p>Consistent publishing cadence and steady month-on-month growth in engagement.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Experience and learning</div>
+      <h2>How I got here</h2>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl-item">
+        <div class="tl-date">Ongoing</div>
+        <h3>Digital Marketing Executive</h3>
+        <p>Handling SEO, social media marketing, Google Ads and Meta advertising, content and email marketing, and brand strategy consulting for clients — one year of hands-on experience so far, alongside front-end development.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Internship</div>
+        <h3>Digital marketing internship</h3>
+        <p>Worked across live SEO and ad projects for clients, learning how strategy holds up outside of coursework.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Coursework</div>
+        <h3>Digital marketing course and certifications</h3>
+        <p>Formal training covering SEO, SEM, social media marketing and analytics.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Practice</div>
+        <h3>Self-directed projects</h3>
+        <p>Personal SEO and content projects used to test tactics before applying them to client work — including the ongoing SEO of this site.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Why work with me</div>
+      <h2>What I bring to a project</h2>
+    </div>
+    <div class="why-grid reveal">
+      <div class="why-item"><div class="why-index">Approach</div><h3>Creative thinking</h3><p>Campaigns that stand out instead of following the same template as everyone else in the category.</p></div>
+      <div class="why-item"><div class="why-index">Approach</div><h3>Data-driven</h3><p>Decisions backed by analytics and search console data, not just instinct.</p></div>
+      <div class="why-item"><div class="why-index">Approach</div><h3>Continuous learning</h3><p>Digital marketing changes fast — I keep testing new tools and tactics rather than sticking to one playbook.</p></div>
+      <div class="why-item"><div class="why-index">Approach</div><h3>Result-oriented</h3><p>Every campaign is judged by what it actually moved — traffic, leads, or engagement.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="achievements">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Certifications & achievements</div>
+      <h2>Where I've formalised the practice</h2>
+    </div>
+    <div class="achieve-grid reveal">
+      <div class="achieve-card"><div class="aval">DM</div><div class="alab">Digital Marketing Certification</div></div>
+      <div class="achieve-card"><div class="aval">SEO</div><div class="alab">SEO Course Completed</div></div>
+      <div class="achieve-card"><div class="aval">05+</div><div class="alab">Projects Completed</div></div>
+      <div class="achieve-card"><div class="aval">01yr</div><div class="alab">Hands-on Experience</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Testimonials</div>
+      <h2>What clients say</h2>
+    </div>
+    <div class="testi-box reveal">
+      <p>Client and mentor feedback will go here.</p>
+      <span>Reserved for testimonials as projects are completed.</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <h2>Let's grow something digital.</h2>
+      <p>Have a project in mind, or just want to talk strategy? I'd like to hear about it.</p>
+      <ul class="contact-links">
+        <li><span class="clabel">Email</span><a href="mailto:ajinsyc@gmail.com">ajinsyc@gmail.com</a></li>
+        <li><span class="clabel">Phone</span><a href="tel:+91">Add your number</a></li>
+        <li><span class="clabel">LinkedIn</span><a href="#">Add your LinkedIn URL</a></li>
+        <li><span class="clabel">Instagram</span><a href="#">Add your Instagram URL</a></li>
+      </ul>
+    </div>
+    <form class="contact-form reveal" onsubmit="event.preventDefault(); window.location.href='mailto:ajinsyc@gmail.com?subject=' + encodeURIComponent('Portfolio enquiry from ' + this.name.value) + '&body=' + encodeURIComponent(this.message.value + '\n\nFrom: ' + this.name.value + ' (' + this.email.value + ')');">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" placeholder="Tell me about your project" required></textarea>
+      <button type="submit" class="btn-primary">Send message →</button>
+      <p class="form-note">Opens your email app with the message pre-filled — swap this for a form backend (e.g. Formspree) if you'd rather it send directly.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <p>© <span id="year"></span> AJINSY. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const menuBtn = document.getElementById('menuBtn');
+  const closeBtn = document.getElementById('closeBtn');
+  const panel = document.getElementById('mobilePanel');
+  menuBtn.addEventListener('click', () => panel.classList.add('open'));
+  closeBtn.addEventListener('click', () => panel.classList.remove('open'));
+  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => panel.classList.remove('open')));
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AJINSY — Front-End Developer & Digital Marketer</title>
